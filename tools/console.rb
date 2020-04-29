@@ -10,9 +10,15 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
+v1 = Viewer.new("lili")
+v2 = Viewer.new("gaby")
 
+m1 = Movie.new("Kill Bill")
+m2 = Movie.new("White Chicks")
 
-
+r1 = Review.new(v1,m1,9) #viewer,movie,rating
+r2 = Review.new(v2,m2,8) #viewer,movie,rating
+r3 = Review.new(v2,m1,5) #viewer,movie,rating
 
 # ===== WARNING! DO NOT EDIT BELOW THIS LINE ===== #
 binding.pry
