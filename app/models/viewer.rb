@@ -32,7 +32,6 @@ class Viewer
       current_review = Review.all.find do |inst| inst.movie == movie end 
         current_review.rating = rating 
     end 
-    current_review 
   end 
 
 end
