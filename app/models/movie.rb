@@ -12,4 +12,20 @@ class Movie
     @@all
   end
 
+  def reviews
+    Review.all.select {|x| x.movie == self}
+  end
+
+  def reviewers
+    reviews.map {|x| x.viewer}
+  end
+
+  def average_rating
+    reviews.map{|x| x.rating}.sum / reviews.count
+  end
+
+  def self.highest_rated
+    Review.all.map {|x| x.rating}.max
+  end
+
 end
